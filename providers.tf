@@ -5,7 +5,7 @@
 provider "aws" {
   region  = "us-east-1"
   version = "~> 2.38.0"
-  shared_credentials_file = "$HOME/.aws/credentials"
+  shared_credentials_file = "/root/.aws/credentials"
 }
 
 # Using these data sources allows the configuration to be
