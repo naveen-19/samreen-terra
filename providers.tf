@@ -4,7 +4,7 @@
 
 provider "aws" {
   region  = "us-east-1"
-  version = "~> 2.38.0"
+  version = "~> 1.1"
   shared_credentials_file = "/root/.aws/credentials"
 }
 
