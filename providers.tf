@@ -4,9 +4,9 @@
 
 provider "aws" {
   region  = "ap-south-1"
-  version = "~> 2.0"
+  version = ">= 2.38.0"
   #shared_credentials_file = "/root/.aws/credentials"
-  profile                 = "default"
+  #profile                 = "default"
 }
 
 # Using these data sources allows the configuration to be
