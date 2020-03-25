@@ -36,7 +36,7 @@ resource "aws_iam_role_policy_attachment" "demo-node-AmazonEC2ContainerRegistryR
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.demo-node.name
 }
-
+/*
 resource "aws_launch_configuration" "demo" {
   associate_public_ip_address = true
   #iam_instance_profile = aws_iam_instance_profile.demo-node.name
@@ -51,12 +51,13 @@ resource "aws_launch_configuration" "demo" {
     create_before_destroy = true
   }
 }
-
+*/
 resource "aws_eks_node_group" "demo" {
   cluster_name    = aws_eks_cluster.demo.name
   node_group_name = "demo"
   node_role_arn   = aws_iam_role.demo-node.arn
   subnet_ids      = aws_subnet.demo[*].id
+  key_pair        ="ritu"
   
   scaling_config {
     desired_size = 1
