@@ -57,7 +57,7 @@ resource "aws_eks_node_group" "demo" {
   node_group_name = "demo"
   node_role_arn   = aws_iam_role.demo-node.arn
   subnet_ids      = aws_subnet.demo[*].id
-  key_pair        ="ritu"
+  key_name        = "ritu"
   
   scaling_config {
     desired_size = 1
