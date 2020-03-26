@@ -20,6 +20,7 @@ resource "aws_iam_role" "demo-node" {
     }
   ]
 }
+
 POLICY
 }
 resource "aws_iam_role_policy_attachment" "demo-node-AmazonEKSWorkerNodePolicy" {
