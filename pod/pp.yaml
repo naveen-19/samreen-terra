@@ -8,7 +8,7 @@
  spec:
    nodeName:
    volumes:
-   - name: html
+   - name: ppvol
      emptyDir: {}
    containers:
      - name: gcc-pp
@@ -20,7 +20,6 @@
        args: [ "while true; do sleep 30; done;" ]
        ports:
        - containerPort: 3000
-   containers:
      - name: gcc-pp1
        image: gcc
        volumeMounts:
